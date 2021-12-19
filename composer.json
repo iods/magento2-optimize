@@ -1,0 +1,19 @@
+{
+  "name": "iods/module-optimize",
+  "description": "A SEO library for getting the most out of Magento Catalog data.",
+  "type": "magento2-module",
+  "homepage": "http://ryemiller.io",
+  "license": [
+    "MIT"
+  ],
+  "require": {
+    "php": ">=7.3.0"
+  },
+  "autoload": {
+    "files": ["registration.php"],
+    "psr-4": {
+      "Iods\\Optimize\\": ""
+    }
+  },
+  "version": "0.0.1"
+}
