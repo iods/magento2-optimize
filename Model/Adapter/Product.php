@@ -7,3 +7,4 @@
  * @license   See LICENSE for license details.
  */
 declare(strict_types=1);
+

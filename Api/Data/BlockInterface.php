@@ -7,3 +7,15 @@
  * @license   See LICENSE for license details.
  */
 declare(strict_types=1);
+
+namespace Iods\Optimize\Api\Data;
+
+/**
+ * Interface BlockInterface
+ * @package Iods\Optimize\Api\Data
+ */
+interface BlockInterface
+{
+    /** @return string */
+    public function getSeoMetaData(): string;
+}
