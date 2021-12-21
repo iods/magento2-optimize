@@ -16,4 +16,4 @@ use Iods\Optimize\Api\UrlRetrieverInterface;
  * ProductUrlInterface
  * @package Iods\Optimize\Api\Data
  */
-interface ProductUrlInterface extends UrlRetrieverInterface {}
+interface ProductUrlRetrieverInterface extends UrlRetrieverInterface {}
