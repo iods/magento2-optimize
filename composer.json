@@ -1,56 +1,66 @@
 {
-  "name": "iods/module-optimize",
-  "description": "A SEO library for getting the most out of Magento Catalog data.",
-  "type": "magento2-module",
-  "version": "000.1.1",
-  "license": [
-    "MIT"
-  ],
-  "authors": [
-    {
-      "name": "Rye Miller",
-      "email": "rye@drkstr.dev",
-      "homepage": "https://ryemiller.io",
-    }
-  ],
-  "minimum-stability": "dev",
-  "repositories": {
-    "magento": {
-      "type": "composer",
-      "url": "https://repo.magento.com/"
-    }
-  },
-  "require": {
-    "php": ">=8.1",
-    "iods/module-base": "*",
-    "iods/module-baseui": "*",
-    "iods/module-connect": "*",
-    "iods/module-sysconfig": "*",
-    "iods/module-bunyan": "*",
-    "iods/module-cream": "*",
-    "iods/module-frostbite": "*",
-    "magento/framework": ">=103.0.5-p1",
-    "symfony/console": "*"
-  },
-  "require-dev": {
-    "phpstan/extension-installer": "*",
-    "phpstan/phpstan": "*",
-    "phpstan/phpstan-phpunit": "*",
-    "phpunit/phpunit": "*",
-    "composer/composer": "*@dev"
-  },
-  "autoload": {
-    "files": ["registration.php"],
-    "psr-4": {
-      "Iods\\Optimize\\": "src"
-    }
-  },
-  "scripts": {
-    "test": [
-      "@phpstan",
-      "@phpunit"
-    ],
-    "phpstan": "phpstan analyse",
-    "phpunit": "phpunit --no-coverage"
-  }
+	"name": "iods/module-optimize",
+	"description": "A module for optimizing the speed and reliability of Magento storefronts.",
+	"type": "magento2-module",
+	"version": "0.1.0",
+	"homepage": "https://ryemiller.io",
+	"license": [
+		"MIT"
+	],
+	"authors": [
+		{
+			"name": "Rye Miller",
+			"email": "rye@drkstr.dev",
+			"role": "Developer",
+			"homepage": "https://ryemiller.io"
+		}
+	],
+	"minimum-stability": "dev",
+	"repositories": {
+		"magento": {
+			"type": "composer",
+			"url": "https://repo.magento.com/"
+		}
+	},
+	"require": {
+		"php": "~8.2.0|~8.1.0|~8.0.0|~7.4.0|~7.3.0",
+        "iods/module-base": "*",
+        "iods/module-baseui": "*",
+        "iods/module-sysconfig": "*",
+        "iods/module-connect": "*",
+		"magento/framework": "^103.0",
+		"symfony/console": "*"
+	},
+	"require-dev": {
+		"phpstan/extension-installer": "^1.0",
+		"phpstan/phpstan": "^0.11",
+		"phpstan/phpstan-phpunit": "^0.11",
+		"phpunit/phpunit": "^9.0",
+		"composer/composer": "*@dev"
+	},
+	"autoload": {
+		"files": ["registration.php"],
+		"psr-4": {
+			"Iods\\Optimize\\": "src"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Iods\\Optimize\\Tests\\Unit\\": "tests/unit"
+		}
+	},
+	"scripts": {
+		"test": [
+			"@phpstan",
+			"@phpunit"
+		],
+		"phpstan": "phpstan analyse",
+		"phpunit": "phpunit --no-coverage"
+	},
+	"config": {
+		"allow-plugins": {
+			"phpstan/extension-installer": true,
+			"magento/composer-dependency-version-audit-plugin": true
+		}
+	}
 }
